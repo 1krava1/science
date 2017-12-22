@@ -17,7 +17,7 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { EditPlaceComponent } from './components/edit-place/edit-place.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { NavigationComponent } from './components/shared/navigation/navigation.component';
 
 
 @NgModule({

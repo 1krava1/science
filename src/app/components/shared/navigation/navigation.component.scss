@@ -1,0 +1,24 @@
+.navigation{
+  &__list{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+  &__item{
+    padding: 0 5px;
+  }
+  &__link{
+    display: block;
+    padding: 15px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-decoration: none;
+    &:hover{
+      color: #777777;
+    }
+  }
+}

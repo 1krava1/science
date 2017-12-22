@@ -6,7 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  links = [
+    {
+      'route': 'map',
+      'text': 'map'
+    },
+    {
+      'route': 'places',
+      'text': 'places'
+    },
+    {
+      'route': 'users',
+      'text': 'users'
+    },
+    {
+      'route': 'register',
+      'text': 'login'
+    },
+  ];
   constructor() { }
 
   ngOnInit() {
