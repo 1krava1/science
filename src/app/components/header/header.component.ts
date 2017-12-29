@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  links = [
+  navLinks = [
     {
       'route': 'map',
       'text': 'map'
@@ -19,9 +19,15 @@ export class HeaderComponent implements OnInit {
       'route': 'users',
       'text': 'users'
     },
+  ];
+  profileLinks = [
     {
-      'route': 'register',
-      'text': 'login'
+      'route': 'signin',
+      'text': 'sign in'
+    },
+    {
+      'route': 'signup',
+      'text': 'sign up'
     },
   ];
   constructor() { }

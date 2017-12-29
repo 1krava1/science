@@ -12,8 +12,8 @@ import { PlaceComponent } from './components/issue/issue.component';
 import { PlacesComponent } from './components/issues/issues.component';
 import { UserComponent } from './components/user/user.component';
 import { UsersComponent } from './components/users/users.component';
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/signup/signup.component';
+import { SignInComponent } from './components/signin/signin.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { EditPlaceComponent } from './components/edit-issue/edit-issue.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -30,8 +30,8 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
     PlacesComponent,
     UserComponent,
     UsersComponent,
-    RegisterComponent,
-    LoginComponent,
+    SignUpComponent,
+    SignInComponent,
     EditUserComponent,
     EditPlaceComponent,
     HeaderComponent,

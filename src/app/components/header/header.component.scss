@@ -1,6 +1,7 @@
 #header{
   display: flex;
   align-items: center;
+  background: #557a95;
   .header{
     &__logo{
       display: flex;
@@ -8,9 +9,11 @@
       justify-content: center;
       font-size: 32px;
       height: 100%;
-      color: #123456;
+      color: #fff;
+      transform: rotateY(0deg);
+      transition: .2s;
       &:hover{
-        color: #654321;
+        transform: rotateY(180deg);
       }
     }
   }
