@@ -1,0 +1,23 @@
+#footer{
+  background: #557a95;
+  color: #333;
+  padding: 15px 0;
+  .footer{
+    &__logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      height: 100%;
+      color: #000;
+      transform: rotateY(0deg);
+      transition: .2s;
+      &:hover{
+        transform: rotateY(180deg);
+      }
+    }
+    &__link{
+      color: #ffffff;
+    }
+  }
+}
