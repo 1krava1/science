@@ -12,8 +12,8 @@ export class HeaderComponent implements OnInit {
       'text': 'map'
     },
     {
-      'route': 'places',
-      'text': 'places'
+      'route': 'issues',
+      'text': 'issues'
     },
     {
       'route': 'users',

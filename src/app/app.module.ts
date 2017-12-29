@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -7,18 +8,17 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { MapComponent } from './components/map/map.component';
 import { EditComponent } from './components/edit/edit.component';
-import { PlaceComponent } from './components/place/place.component';
-import { PlacesComponent } from './components/places/places.component';
+import { PlaceComponent } from './components/issue/issue.component';
+import { PlacesComponent } from './components/issues/issues.component';
 import { UserComponent } from './components/user/user.component';
 import { UsersComponent } from './components/users/users.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
-import { EditPlaceComponent } from './components/edit-place/edit-place.component';
+import { EditPlaceComponent } from './components/edit-issue/edit-issue.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component';
-
 
 @NgModule({
   declarations: [
@@ -40,9 +40,12 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    FormBuilder,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

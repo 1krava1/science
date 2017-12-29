@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-edit-place',
-  templateUrl: './edit-place.component.html',
-  styleUrls: ['./edit-place.component.scss']
+  selector: 'app-edit-issue',
+  templateUrl: './edit-issue.component.html',
+  styleUrls: ['./edit-issue.component.scss']
 })
 export class EditPlaceComponent implements OnInit {
 
