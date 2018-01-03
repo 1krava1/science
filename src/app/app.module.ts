@@ -45,7 +45,8 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
     HttpClientModule,
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule.withServerTransition({ appId: 'science' })
   ],
   providers: [
     FormBuilder,
