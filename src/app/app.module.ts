@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { UserService } from './services/user/user.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -39,12 +42,14 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
     NavigationComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [
     FormBuilder,
+    UserService,
   ],
   bootstrap: [AppComponent]
 })

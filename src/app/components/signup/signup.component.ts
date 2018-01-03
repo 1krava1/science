@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import {UserService} from "../../services/user/user.service";
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,8 @@ import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 export class SignUpComponent implements OnInit {
   registrationForm;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              private userService: UserService) {
   }
 
   ngOnInit() {
@@ -26,7 +28,11 @@ export class SignUpComponent implements OnInit {
 
   doSignUp(): void {
     const data = this.registrationForm.value;
-    console.log( data );
+    this.userService.signUp(data).subscribe( (response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
+    });
   }
 
   isEmailValid(): boolean {
