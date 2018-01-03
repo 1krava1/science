@@ -26,15 +26,6 @@ export class SignUpComponent implements OnInit {
     });
   }
 
-  doSignUp(): void {
-    const data = this.registrationForm.value;
-    this.userService.signUp(data).subscribe( (response) => {
-      console.log(response);
-    }, (error) => {
-      console.log(error);
-    });
-  }
-
   isEmailValid(): boolean {
     let res = true;
     if ( this.registrationForm.get('email').touched ) {
@@ -61,8 +52,19 @@ export class SignUpComponent implements OnInit {
   }
 
   isFormValid(): boolean {
-    const res = this.isEmailValid() && this.isPasswordValid() && this.isRepeatPasswordValid() && this.registrationForm.valid;
-    return res;
+    return this.isEmailValid() && this.isPasswordValid() && this.isRepeatPasswordValid() && this.registrationForm.valid;
+  }
+
+  doSignUp(): void {
+    const data = {
+      email: this.registrationForm.get('email').value,
+      password: this.registrationForm.get('password').value,
+    };
+    this.userService.signUp(data).subscribe( (response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error);
+    });
   }
 
 }
