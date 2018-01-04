@@ -14,6 +14,7 @@ const DIST_FOLDER = join(process.cwd(), 'dist');
 const app = express();
 
 const template = readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
+
 const { AppServerModuleNgFactory } = require('main.server');
 
 app.engine('html', (_, options, callback) => {
@@ -24,9 +25,12 @@ app.engine('html', (_, options, callback) => {
 });
 
 app.set('view engine', 'html');
-app.set('views', 'src');
+app.set('views', join(DIST_FOLDER, 'browser'));
 
-app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
+// Server static files from /browser
+app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
+  maxAge: '1y'
+}));
 
 app.get('*', (req, res) => {
   res.render('index', { req });
