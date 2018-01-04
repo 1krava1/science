@@ -1,3 +1,25 @@
-<p>
-  footer works!
-</p>
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <a [routerLink]="['/']" class="footer__logo">
+          <i class="fas fa-map-marker-alt"></i>
+        </a>
+      </div>
+      <div class="col-11 text-right">
+        <div class="row">
+          <div class="col-12">
+              Github repositories of the project:
+              <a class="footer__link" target="_blank" href="https://github.com/1krava1/whats-wrong-front">frontend</a>,
+              <a class="footer__link" target="_blank" href="https://github.com/staciedev/whats-wrong-api">backend</a>.
+          </div>
+          <div class="col-12">
+              Linkedin pages of the contributors:
+              <a class="footer__link" target="_blank" href="https://www.linkedin.com/in/nick-kravchenko">Nikolay Kravchenko</a>,
+              <a class="footer__link" target="_blank" href="https://www.linkedin.com/in/anastasia-borenko-915283102/">Anastasia Borenko</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

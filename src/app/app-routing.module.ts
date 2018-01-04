@@ -3,14 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import {MainComponent} from './components/main/main.component';
 import {EditComponent} from './components/edit/edit.component';
 import {MapComponent} from './components/map/map.component';
-import {PlaceComponent} from './components/place/place.component';
-import {PlacesComponent} from './components/places/places.component';
+import {PlaceComponent} from './components/issue/issue.component';
+import {PlacesComponent} from './components/issues/issues.component';
 import {UserComponent} from './components/user/user.component';
 import {UsersComponent} from './components/users/users.component';
-import {RegisterComponent} from './components/register/register.component';
-import {LoginComponent} from './components/login/login.component';
+import {SignUpComponent} from './components/signup/signup.component';
+import {SignInComponent} from './components/signin/signin.component';
 import {EditUserComponent} from './components/edit-user/edit-user.component';
-import {EditPlaceComponent} from './components/edit-place/edit-place.component';
+import {EditPlaceComponent} from './components/edit-issue/edit-issue.component';
 
 const routes: Routes = [
   {
@@ -30,7 +30,7 @@ const routes: Routes = [
         component: EditUserComponent
       },
       {
-        path: 'place/:id',
+        path: 'issue/:id',
         component: EditPlaceComponent
       },
       {
@@ -38,17 +38,17 @@ const routes: Routes = [
         component: EditUserComponent
       },
       {
-        path: 'place',
+        path: 'issue',
         component: EditPlaceComponent
       },
     ]
   },
   {
-    path: 'place/:id',
+    path: 'issue/:id',
     component: PlaceComponent,
   },
   {
-    path: 'places',
+    path: 'issues',
     component: PlacesComponent,
   },
   {
@@ -60,12 +60,12 @@ const routes: Routes = [
     component: UsersComponent,
   },
   {
-    path: 'register',
-    component: RegisterComponent,
+    path: 'signup',
+    component: SignUpComponent,
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'signin',
+    component: SignInComponent,
   },
 ];
 

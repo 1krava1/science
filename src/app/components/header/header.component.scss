@@ -1,0 +1,24 @@
+#header{
+  display: flex;
+  align-items: center;
+  background: rgba(85, 122, 149, .7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .header{
+    &__logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      height: 100%;
+      color: #fff;
+      transform: rotateY(0deg);
+      transition: .2s;
+      &:hover{
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}

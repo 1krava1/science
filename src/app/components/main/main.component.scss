@@ -1,0 +1,26 @@
+.splash-image{
+  background-image: url('/assets/img/splash-image.jpg');
+  min-height: 100vh;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  background-size: 100%;
+  h1{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 72px;
+  }
+}
+section{
+  padding: 40px 15px;
+  &.how-it-works{
+
+  }
+  &.functionality{
+    background: #7395ae;
+    color: #fff;
+  }
+  &.our-team{
+
+  }
+}
