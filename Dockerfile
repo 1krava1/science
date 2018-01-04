@@ -3,7 +3,7 @@
 # We label our stage as 'builder'
 FROM node:8-alpine as builder
 
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
 
@@ -21,11 +21,10 @@ RUN npm run build
 ### STAGE 2: Setup ###
 FROM node:8-alpine
 
-## Install http-server
-RUN npm install http-server -g
-
 ## From 'builder' stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /ng-app/dist /dist
+COPY --from=builder /ng-app/node_modules /node_modules
+COPY --from=builder package.json package-lock.json ./
 
 EXPOSE 8080
-CMD ["npm", "wtf"]
+CMD ["npm", "run", "wtf"]
