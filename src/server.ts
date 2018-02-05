@@ -8,7 +8,7 @@ import { readFileSync } from 'fs';
 
 enableProdMode();
 
-const PORT = 8080;
+const PORT = 80;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
 const app = express();
