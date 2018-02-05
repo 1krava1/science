@@ -26,5 +26,5 @@ COPY --from=builder /ng-app/dist /dist
 COPY --from=builder /ng-app/node_modules /node_modules
 COPY --from=builder package.json package-lock.json ./
 
-EXPOSE 8080
+EXPOSE 80
 CMD ["npm", "run", "wtf"]
